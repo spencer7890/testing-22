@@ -16,3 +16,6 @@ apps/
 *.log
 chromeDriver
 .tmp
+
+# custom custom
+.env

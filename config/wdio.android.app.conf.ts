@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import { join } from 'path';
 import config from './wdio.shared.local.appium.conf';
 
@@ -21,8 +24,10 @@ config.capabilities = [
         // For W3C the appium capabilities need to have an extension prefix
         // http://appium.io/docs/en/writing-running-appium/caps/
         // This is `appium:` for all Appium Capabilities which can be found here
-        'appium:deviceName': 'Pixel_3_10.0',
-        'appium:platformVersion': '10.0',
+        'appium:deviceName': process.env.ANDROID_VIRTUAL_DEVICE_NAME,
+        'appium:platformVersion': process.env.ANDROID_VIRTUAL_PLATFORM_NAME,
+        // 'appium:deviceName': 'Pixel_3_10.0',
+        // 'appium:platformVersion': '10.0',
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'UiAutomator2',
         // The path to the app
