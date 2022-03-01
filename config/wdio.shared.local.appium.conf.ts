@@ -25,6 +25,28 @@ config.services = (config.services ? config.services : []).concat([
 // Server Configurations
 // =====================
 //
-config.port = 4723;
+// config.port = 4723;
+
+// config.path ='/wd/hub';
+// config.logLevel = "debug";
+// config.host = "localhost";
+
+// console.log('config ', config)
+
+const serverConfig = {
+  // path: '/wd/hub',
+  host: process.env.APPIUM_HOST || 'localhost',
+  port: process.env.APPIUM_PORT || 4723,
+  // logLevel: 'info',
+  logLevel: 'debug',
+};
+
+config = {
+  ...config,
+  ...serverConfig
+}
+
+console.log('config ', config);
+console.log('config services ', config.services);
 
 export default config;

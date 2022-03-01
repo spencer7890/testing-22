@@ -10,6 +10,9 @@ describe('WebdriverIO and Appium, when interacting with a login form,', () => {
     });
 
     it('should be able login successfully', async () => {
+
+        console.log('something else ');
+
         // Always make sure you are on the right tab
         await LoginScreen.tapOnLoginContainerButton();
         // Submit the data

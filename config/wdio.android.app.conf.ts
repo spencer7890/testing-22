@@ -25,13 +25,15 @@ config.capabilities = [
         // http://appium.io/docs/en/writing-running-appium/caps/
         // This is `appium:` for all Appium Capabilities which can be found here
         'appium:deviceName': process.env.ANDROID_VIRTUAL_DEVICE_NAME,
-        'appium:platformVersion': process.env.ANDROID_VIRTUAL_PLATFORM_NAME,
+        'appium:platformVersion': process.env.ANDROID_VIRTUAL_PLATFORM_VERSION,
         // 'appium:deviceName': 'Pixel_3_10.0',
         // 'appium:platformVersion': '10.0',
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'UiAutomator2',
         // The path to the app
-        'appium:app': join(process.cwd(), './apps/Android-NativeDemoApp-0.4.0.apk'),
+        // TODO - keep for ref
+        // 'appium:app': join(process.cwd(), './apps/Android-NativeDemoApp-0.4.0.apk'),
+        'appium:app': join(process.cwd(), '' + process.env.ANDROID_APP_APK_RELATIVE_LOCATION),
         // @ts-ignore
         'appium:appWaitActivity': 'com.wdiodemoapp.MainActivity',
         // Read the reset strategies very well, they differ per platform, see
@@ -41,4 +43,7 @@ config.capabilities = [
     },
 ];
 
+console.log('config capabilities ', config.capabilities);
+
 exports.config = config;
+

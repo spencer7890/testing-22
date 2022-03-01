@@ -3,6 +3,15 @@
  * If you want to know which configuration options you have then you can
  * check https://webdriver.io/docs/configurationfile
  */
+
+// const serverConfig = {
+//   path: '/wd/hub',
+//   host: process.env.APPIUM_HOST || 'localhost',
+//   port: process.env.APPIUM_PORT || 4723,
+//   // logLevel: 'info',
+//   logLevel: 'debug',
+// };
+
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -11,6 +20,7 @@ export const config: WebdriverIO.Config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
+    // ...serverConfig,
     //
     // ==================
     // Specify Test Files
@@ -119,7 +129,7 @@ export const config: WebdriverIO.Config = {
          * tests because they can take a bit longer.
          */
         timeout: 3 * 60 * 1000, // 3min
-    },
+    }
     //
     // =====
     // Hooks

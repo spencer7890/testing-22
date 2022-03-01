@@ -8,7 +8,7 @@
     "android.sauce.emulators.app.us": "wdio config/saucelabs/wdio.android.emulators.app.conf.ts",
     "android.sauce.rdc.app.eu": "REGION=eu wdio config/saucelabs/wdio.android.rdc.app.conf.ts",
     "android.sauce.rdc.app.us": "wdio config/saucelabs/wdio.android.rdc.app.conf.ts",
-    "android.app": "wdio config/wdio.android.app.conf.ts",
+    "android.app": "logLevel=debug wdio config/wdio.android.app.conf.ts",
     "android.browser": "wdio config/wdio.android.browser.conf.ts",
     "ios.app": "wdio config/wdio.ios.app.conf.ts",
     "ios.sauce.simulators.app.eu": "REGION=eu wdio ./config/saucelabs/wdio.ios.simulators.app.conf.ts",

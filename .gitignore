@@ -18,4 +18,5 @@ chromeDriver
 .tmp
 
 # custom custom
+ignored/
 .env
