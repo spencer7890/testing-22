@@ -34,7 +34,7 @@ config.services = (config.services ? config.services : []).concat([
 // console.log('config ', config)
 
 const serverConfig = {
-  // path: '/wd/hub',
+  path: '/wd/hub',
   host: process.env.APPIUM_HOST || 'localhost',
   port: process.env.APPIUM_PORT || 4723,
   // logLevel: 'info',
